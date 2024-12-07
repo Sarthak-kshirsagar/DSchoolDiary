@@ -37,6 +37,10 @@ import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import './style.css';
 
+const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID; // Replace with your EmailJS service ID
+const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID; // Replace with your EmailJS template ID
+const userId = process.env.REACT_APP_EMAILJS_USER_ID; // Replace with your EmailJS user ID
+
 const ContactSales = () => {
   const [formData, setFormData] = useState({
     firstName: '',
@@ -51,11 +55,7 @@ const ContactSales = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    const serviceId = 'service_p03j3ul'; // Replace with your EmailJS service ID
-    const templateId = 'template_3khyp5k'; // Replace with your EmailJS template ID
-    const userId = 'k2Cl4Hkc4ZQcKtb28'; // Replace with your EmailJS user ID
-
+    console.log(userId);
     // Map formData to the template placeholders
     const emailData = {
       to_name: 'DSchoolDiary Team', // Recipient name
