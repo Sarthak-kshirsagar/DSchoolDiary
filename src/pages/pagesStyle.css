@@ -60,3 +60,15 @@ body{
   .title-head{
     margin-bottom: 10px;
   }
+
+  @media(min-width:320px) and (max-width:780px) {
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      height: auto;
+    }
+  }
